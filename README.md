@@ -13,7 +13,7 @@ Autoscaling Group module for AWS
 
 ```hcl
 module "app" {
-  source                      = "github.com/odzhu/terralib-aws-asg"
+  source                      = "github.com/odzhu/terraform-aws-asg"
   subnet_ids                  = "${var.private_subnet_ids}"
   environment                 = "${var.environment}"
   name                        = "${var.app_name}"
