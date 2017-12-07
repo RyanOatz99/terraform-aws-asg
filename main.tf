@@ -16,8 +16,8 @@ resource "aws_launch_configuration" "alc" {
   }
 
   ephemeral_block_device {
-    DeviceName  = "/dev/sdc"
-    VirtualName = "ephemeral1"
+    device_name  = "/dev/sdc"
+    virtual_name = "ephemeral0"
   }
 
   security_groups             = ["${aws_security_group.default.id}"]
