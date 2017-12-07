@@ -15,6 +15,11 @@ resource "aws_launch_configuration" "alc" {
     delete_on_termination = true
   }
 
+  ephemeral_block_device {
+    DeviceName  = "/dev/sdc"
+    VirtualName = "ephemeral1"
+  }
+
   security_groups             = ["${aws_security_group.default.id}"]
   associate_public_ip_address = "${var.associate_public_ip_address}"
 }
